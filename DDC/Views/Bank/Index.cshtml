@@ -5,7 +5,7 @@
             <div class="box">
                 <div class="box-header">
                     <h3 class="box-title"><b>DDC Banks List</b> </h3><br/>
-                    <a href="" class="btn btn-primary btn-flat">New</a>
+                    <a href="@Url.Action("Add")" class="btn btn-primary"><b class="fa fa-plus fa-lg">New</b></a>
                 </div><!-- /.box-header -->
                 <div class="box-body">
                     <table id="example1" class="table table-bordered table-striped">
@@ -24,22 +24,12 @@
                                 Pharbhu Bank
                             </td>
                             <td>
-                                <a href="">update</a>|
-                                <a href="">delete</a>
+                                <a href="@Url.Action("Update")" class="btn btn-info btn-sm "><b class="fa fa-pencil-square-o fa-lg"></b></a>
+                                <a href="@Url.Action("Delete")" class="btn btn-danger btn-sm"><b class="fa fa-trash-o fa-lg"></b></a>
                             </td>
  
                         </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>
-                                    Nabil Bank
-                                </td>
-                                <td>
-                                    <a href="">update</a>|
-                                    <a href="">delete</a>
-                                </td>
-
-                            </tr>
+                            
 
                         </tbody>
 
