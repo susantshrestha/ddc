@@ -34,20 +34,13 @@
                 <!-- Navbar Right Menu -->
                 <div class="navbar-custom-menu">
                     
-@*                    <form action="#" method="get" class="sidebar-form">*@
+@*                  
+@*                    <form action="#" class="navbar-form navbar-left" role="search" method="get">*@
 @*                        <div class="input-group">*@
-@*                            <input type="text" name="q" class="form-control" placeholder="Search..." />*@
-@*                            <span class="input-group-btn">*@
-@*                                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i></button>*@
-@*                            </span>*@
+@*                            <input type="text" class="form-control" id="navbar-search-input" placeholder="Search">*@
+@*                            *@
 @*                        </div>*@
 @*                    </form>*@
-                    <form action="#" class="navbar-form navbar-left" role="search" method="get">
-                        <div class="input-group">
-                            <input type="text" class="form-control" id="navbar-search-input" placeholder="Search">
-                            
-                        </div>
-                    </form>
                   
 
 
@@ -101,14 +94,22 @@
                     <!-- Optionally, you can add icons to the links -->
                     <li class="active"><a href="@Url.Action("Index", "Dash")"><i class="fa fa-list"></i> <span>Index</span></a></li>
                     <li><a href="@Url.Action("Index", "Bank")"><i class="fa fa-bank"></i> <span>Banks</span></a></li>
-                    <li><a href="#"><i class="fa fa-link"></i> <span>Chise</span></a></li>
-                    <li><a href="#"><i class="fa fa-link"></i> <span>Sahakari</span></a></li>
+                    <li><a href="@Url.Action("Index", "Chise")"><i class="fa fa-link"></i> <span>Chise</span></a></li>
+                    <li class="dropdown"><a href="@Url.Action("Index", "Shahakari")" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="fa fa-link"></i><span>Sahakari</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>susant</li>
+                            <li>alex</li>
+                            <li>max</li>
+                        </ul>
+                    </li>
                     <li><a href="#"><i class="fa fa-download"></i> <span>Collection & Staff facility</span></a></li>
-                    <li><a href="#"><i class="fa fa-bus"></i> <span>Tankers</span></a></li>
+                    <li><a href="@Url.Action("Index", "Tankers")"><i class="fa fa-bus"></i> <span>Tankers</span></a></li>
                     <li><a href="#"><i class="fa fa-link" ></i> <span>Chalan</span></a></li>
                     <li><a href="#"><i class="fa fa-flask"></i> <span>Lab Receive</span></a></li>
                     <li><a href="#"><i class="fa fa-sticky-note-o"></i> <span>Credit Notes</span></a></li>
-                    <li><a href="#"><i class="fa fa-link"></i> <span>Advance</span></a></li>
+                    <li><a href="@Url.Action("Index", "Advance")"><i class="fa fa-link"></i> <span>Advance</span></a></li>
                     <li><a href="#"><i class="fa fa-money"></i> <span>Payments</span></a></li>
                     <li><a href="#"><i class="fa fa-info-circle"></i> <span>Reports</span></a></li>
                     <li><a href="#"><i class="fa fa-calculator"></i> <span>Incharge fine</span></a></li>
@@ -126,19 +127,25 @@
                     <small>Optional description</small> 
 
                 </h1>
-                <ol class="breadcrumb">
-                    <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
-                    <li class="active">Here</li>
-                </ol>
+@*                <ol class="breadcrumb">*@
+@*                    <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>*@
+@*                    <li class="active">Here</li>*@
+                @*                </ol>*@
+                
+                @Html.MvcSiteMap().SiteMapPath()
             </section>
             <!-- Main content -->
-            <section class="content">
-                <!-- Your Page Content Here -->
+            <div class="container-fluid">
+               
+                    <section class="content container-fluid">
+                        <!-- Your Page Content Here -->
 
-                @RenderBody()
+                        @RenderBody()
 
 
-            </section><!-- /.content -->
+                    </section><!-- /.content -->
+                
+            </div>
         </div><!-- /.content-wrapper -->
     
 
